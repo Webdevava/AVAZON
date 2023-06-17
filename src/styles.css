@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "ember";
+  src: url("./assets/AmazonEmber_Rg.ttf") format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ember;
+  background-color: #e3e6e6;
+}
+
+/* navbar */
+nav {
+  background-color: #141921;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 2px 5px;
+}
+@media (max-width: 50em) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+  }
+}
+
+/* logo */
+#logo_container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+#logo_container #logo {
+  height: 30.5px;
+  margin-top: 4px;
+  /* margin-left: 20px; */
+}
+#logo_container #logo_txt {
+  font-size: 13.5px;
+  text-align: center;
+  margin-top: 8px;
+}
+@media (max-width: 50em) {
+  #logo_container {
+    width: 100%;
+    margin: auto;
+  }
+  #logo_container #logo {
+    margin-left: 0;
+  }
+}
+
+/* location */
+#location_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+#location_container #deliver {
+  margin: 0;
+  text-align: left;
+  font-size: 0.7em;
+  font-weight: lighter;
+  color: #ddd;
+}
+#loc_txt {
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+#loc_txt #point {
+  height: 1.3em;
+  filter: invert(10);
+}
+#loc_txt #location {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 50em) {
+  #location_container {
+    display: none;
+  }
+}
+
+/* input */
+#input_area {
+  display: inline-flex;
+  margin: 0 10px;
+  align-items: center;
+  justify-content: center;
+  /* width: 80%; */
+  height: 34px;
+}
+#input_area section select {
+  height: 40px;
+  width: 40px;
+  border-radius: 4px 0 0 4px;
+}
+#input_area input {
+  height: 100%;
+  width: 500px;
+}
+#input_area button {
+  border: none;
+  border-radius: 0 4px 4px 0;
+  height: 40px;
+
+  width: 40px;
+}
+@media (max-width: 50em) {
+  #input_area {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* lang */
+#lang #lang-Dropdown select {
+  height: 40px;
+  color: #fff;
+  width: 50px;
+  font-weight: 900;
+  font-size: 0.9em;
+  border: none;
+  background-color: transparent;
+}
+#lang #lang-Dropdown select option {
+  height: 40px;
+  color: #000;
+}
+@media (max-width: 50em) {
+  #lang {
+    display: none;
+  }
+}
+
+/* SEC_NAV */
+#sec-nav {
+  background-color: #232f3e;
+  height: 38px;
+}
