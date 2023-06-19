@@ -1,10 +1,19 @@
 import logo from "../assets/avazon.png";
+import { useState } from "react";
 import point from "../assets/location.png";
-import SubNav from "./SubNav";
 const Navbar = () => {
   let name = "Ankur";
   let location = "Majalgaon";
   let pincode = 431131;
+
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <>
@@ -51,8 +60,33 @@ const Navbar = () => {
             </select>
           </section>
         </div>
+
+        <div
+          className="account-dropdown"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <span className="hover-text">Account & Lists</span>
+          {isHovered && (
+            <div className="dropdown-content">
+              {/* Dropdown content */}
+              <ul>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+              </ul>
+              <ul>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+              </ul>
+            </div>
+          )}
+        </div>
       </nav>
-      <SubNav />
     </>
   );
 };
